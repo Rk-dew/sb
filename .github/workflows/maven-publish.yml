@@ -29,6 +29,8 @@ jobs:
 
     - name: Give execute permission to mvnw
       run: chmod +x mvnw
+    - name: Install Maven
+      run: sudo apt-get update && sudo apt-get install -y maven
 
     - name: Build with Maven Wrapper
       run: mvn clean package -Dmaven.test.skip=true
